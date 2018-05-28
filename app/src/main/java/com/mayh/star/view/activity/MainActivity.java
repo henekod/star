@@ -12,9 +12,13 @@ import com.mayh.star.presenter.MainPresenter;
 import com.mayh.star.view.MainView;
 
 /**
- * Created by mayanhua on 2018/5/10.
- * <p>
- * 项目主页面
+ * =========================================
+ *
+ * author: Ma Yuhua
+ * date: 2018/5/28
+ * desc: 项目主页面
+ *
+ * =========================================
  */
 public class MainActivity extends BaseActivity implements MainView, View.OnClickListener {
     private TextView testText;

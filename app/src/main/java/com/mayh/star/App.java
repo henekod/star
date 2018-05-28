@@ -5,9 +5,14 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 /**
- * Created by mayanhua on 2018/5/19.
+ * =========================================
+ *
+ * author: Ma Yuhua
+ * date: 2018/5/28
+ * desc: App
+ *
+ * =========================================
  */
-
 public class App extends Application {
     // SharedPreference 文件名
     private static final String SPFileName = "app_star";

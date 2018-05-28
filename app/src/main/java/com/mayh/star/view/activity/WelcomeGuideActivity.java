@@ -6,9 +6,13 @@ import com.mayh.star.R;
 import com.mayh.star.base.BaseActivity;
 
 /**
- * Created by mayanhua on 2018/5/16.
+ * =========================================
  *
- * 引导页
+ * author: Ma Yuhua
+ * date: 2018/5/28
+ * desc: 引导页
+ *
+ * =========================================
  */
 public class WelcomeGuideActivity extends BaseActivity {
 

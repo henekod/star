@@ -3,11 +3,14 @@ package com.mayh.star.view;
 import com.mayh.star.base.BaseView;
 
 /**
- * Created by mayanhua on 2018/5/11.
- * <p>
- * view 示例
+ * =========================================
+ *
+ * author: Ma Yuhua
+ * date: 2018/5/28
+ * desc: view 示例
+ *
+ * =========================================
  */
-
 public interface MainView extends BaseView {
 
     /**

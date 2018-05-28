@@ -3,6 +3,7 @@
     package="com.mayh.star">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/star_icon"
         android:label="@string/app_name"

@@ -3,4 +3,18 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!--dialog查看详情键-->
+    <color name="colorButtonDialog">#38659C</color>
+
+    <!--个人中心色-->
+    <color name="colorMineBackground">#eaeaea</color>
+    <color name="colorMineText">#8e8e8e</color>
+    <color name="colorClick">#f2f2f2</color>
+    <color name="colorPopItemClick">#a6aaad</color>
+    <color name="colorPopItemClickNormal">#b8bcbf</color>
+    <color name="colorPopItemText">#ffffff</color>
+    <color name="colorBtnNormal">#1e90ff</color>
+    <color name="colorDialogContent">#444851</color>
+    <color name="colorSelected">#d9d9d9</color>
 </resources>
