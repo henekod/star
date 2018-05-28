@@ -1,4 +1,4 @@
-package com.mayh.star.view.activity;
+package com.mayh.star;
 
 import android.app.Application;
 import android.content.Context;

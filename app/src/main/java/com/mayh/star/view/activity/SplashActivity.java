@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.mayh.star.App;
 import com.mayh.star.R;
 import com.mayh.star.base.BaseActivity;
 import com.mayh.star.global.AppConstants;
