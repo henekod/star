@@ -8,6 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mayh.star.interf.BindEventBus;
+
+import org.greenrobot.eventbus.EventBus;
+
 /**
  * Created by mayanhua on 2018/5/10.
  * <p>
@@ -28,7 +32,16 @@ public abstract class BaseFragment extends Fragment implements BaseView {
         mRootView = inflater.inflate(getContentViewId(), container, false);
         this.mContext = getActivity();
         initAllMemberView(savedInstanceState);
+        if (mContext.getClass().isAnnotationPresent(BindEventBus.class))
+            EventBus.getDefault().register(this);
         return mRootView;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        if (mContext.getClass().isAnnotationPresent(BindEventBus.class))
+            EventBus.getDefault().unregister(this);
     }
 
     @Override

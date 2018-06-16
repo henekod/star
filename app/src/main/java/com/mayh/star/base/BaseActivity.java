@@ -8,7 +8,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.mayh.star.R;
+import com.mayh.star.interf.BindEventBus;
 import com.mayh.star.view.custom.ProgressDialog;
+
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * Created by mayanhua on 2018/5/10.
@@ -41,8 +44,17 @@ public abstract class BaseActivity extends Activity implements BaseView {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (this.getClass().isAnnotationPresent(BindEventBus.class))
+            EventBus.getDefault().register(this);
         mProgressDialog = new ProgressDialog(this);
         mProgressDialog.setCancelable(false);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (this.getClass().isAnnotationPresent(BindEventBus.class))
+            EventBus.getDefault().unregister(this);
     }
 
     @Override
