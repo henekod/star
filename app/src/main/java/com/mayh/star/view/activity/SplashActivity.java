@@ -8,6 +8,7 @@ import com.mayh.star.App;
 import com.mayh.star.R;
 import com.mayh.star.base.BaseActivity;
 import com.mayh.star.global.AppConstants;
+import com.mayh.star.utils.SPUtils;
 
 /**
  * =========================================
@@ -27,7 +28,7 @@ public class SplashActivity extends BaseActivity {
         setContentView(R.layout.activity_splash_layout);
 
         // 根据Key获取SharedPreferences文件相应boolean值
-        final boolean isFirstOpen = App.getSharedPreference().getBoolean(AppConstants.FIRST_OPEN, false);
+        final boolean isFirstOpen = SPUtils.getBoolean(this, AppConstants.FIRST_OPEN, false);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -37,17 +38,11 @@ public class SplashActivity extends BaseActivity {
                     finish();
                     return;
                 }
-            }
-        }, 1000);
-
-        // 两秒后关闭启动屏，进入主页
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
+                // 两秒后关闭启动屏，进入主页
                 Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
-        }, 1000);
+        }, 2000);
     }
 }

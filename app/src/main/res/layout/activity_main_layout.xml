@@ -1,26 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mayh.star.view.activity.MainActivity">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/testText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="dddd"/>
+        android:text="dddd"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/testBtn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_margin="20dp"
         android:layout_centerInParent="true"
+        android:layout_margin="20dp"
         android:text="测试"
-        android:textSize="18sp"/>
+        android:textSize="18sp" />
 
-</RelativeLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.mayh.star.view.custom.BottomIndicator
+        android:id="@+id/bottomIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/main_tab_background" />
+
+</LinearLayout>
