@@ -11,8 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 		
-		<!-- 主页 -->
-        <activity android:name=".view.activity.MainActivity">
+        <!-- 启动页 -->
+        <activity android:name=".view.activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,9 +20,9 @@
             </intent-filter>
         </activity>
 
-        <!-- 启动页 -->
+        <!-- 主页 -->
         <activity
-            android:name=".view.activity.SplashActivity"
+            android:name=".view.activity.MainActivity"
             android:screenOrientation="portrait" />
 
         <!-- 引导页 -->

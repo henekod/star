@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -16,7 +17,7 @@ import com.mayh.star.view.custom.ProgressDialog;
  * 项目 Activity 的基类
  */
 
-public abstract class BaseActivity extends Activity implements BaseView {
+public abstract class BaseActivity extends AppCompatActivity implements BaseView {
     /** 是否沉浸式状态栏 **/
     private boolean isStatusBar = true;
 
@@ -36,25 +37,17 @@ public abstract class BaseActivity extends Activity implements BaseView {
 
     protected final String TAG = this.getClass().getSimpleName();
 
-    private ProgressDialog mProgressDialog;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mProgressDialog = new ProgressDialog(this);
-        mProgressDialog.setCancelable(false);
     }
 
     @Override
     public void showLoading() {
-        if (!mProgressDialog.isShowing())
-            mProgressDialog.show();
     }
 
     @Override
     public void hideLoading() {
-        if (mProgressDialog.isShowing())
-            mProgressDialog.dismiss();
     }
 
     @Override
